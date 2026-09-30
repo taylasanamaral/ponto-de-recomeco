@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - ONG Ponto de Recomeço</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <img src="img/logo-ponto-de-recomeco.png" alt="Logo da ONG Ponto de Recomeço">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-hamburguer" tabindex="0" role="button" aria-label="Abrir menu">☰</label>
+    <nav aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <div class="menu-item">
+            <a href="projetos.html">Projetos</a>
+            <div class="submenu">
+                <a href="projetos.html#doacoes">Doações</a>
+                <a href="projetos.html#voluntariado">Voluntariado</a>
+            </div>
+        </div>
+        <a href="cadastro.html">Cadastro</a>
+    </nav>
+</header>
+<main id="conteudo-principal">
+    <h1>Cadastro</h1>
+    <form id="form-cadastro">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" aria-describedby="ajuda-nome" required>
+            <small id="ajuda-nome" class="mensagem-campo">Preencha seu nome completo.</small>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" aria-describedby="ajuda-email" required>
+            <small id="ajuda-email" class="mensagem-campo">Digite um e-mail válido.</small>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" aria-describedby="ajuda-telefone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(00) 00000-0000" required>
+            <small id="ajuda-telefone" class="mensagem-campo">Use o formato (00) 00000-0000.</small>
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+        </fieldset>
+        <fieldset>
+            <legend>Endereço</legend>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000" required>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+        </fieldset>
+        <button type="submit">Enviar cadastro</button>
+            <p id="mensagem-formulario" class="mensagem-formulario" role="status" hidden></p>
+    </form>
+</main>
+<footer><p>ONG Ponto de Recomeço</p></footer>
+<script src="js/cadastro.js"></script>
+</body>
+</html>

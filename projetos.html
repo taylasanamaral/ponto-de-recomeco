@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - ONG Ponto de Recomeço</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <img src="img/logo-ponto-de-recomeco.png" alt="Logo da ONG Ponto de Recomeço">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-hamburguer" tabindex="0" role="button" aria-label="Abrir menu">☰</label>
+    <nav aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <div class="menu-item">
+            <a href="projetos.html">Projetos</a>
+            <div class="submenu">
+                <a href="#doacoes">Doações</a>
+                <a href="#voluntariado">Voluntariado</a>
+            </div>
+        </div>
+        <a href="cadastro.html">Cadastro</a>
+    </nav>
+</header>
+<main id="conteudo-principal">
+    <h1>Nossos Projetos</h1>
+    <div class="alerta">As doações para as ações da ONG estão abertas.</div>
+    <div class="projetos-flex">
+        <article class="projeto" id="doacoes">
+            <span class="badge">Doações abertas</span>
+            <h2>Como Fazer uma Doação</h2>
+            <img class="foto-projeto" loading="lazy" src="img/doacoes.webp" alt="Caixa com alimentos, roupas e outros itens arrecadados para doação">
+            <img class="icone" src="assets/icons/coracao.png" alt="Ícone de coração representando solidariedade">
+            <p>As doações ajudam a ONG Ponto de Recomeço a apoiar famílias em situação de vulnerabilidade. Podem ser doados alimentos, roupas e itens de higiene.</p>
+            <button type="button">Quero ajudar</button>
+        </article>
+        <article class="projeto" id="voluntariado">
+            <span class="badge">Seja voluntário</span>
+            <h2>Trabalho Voluntário</h2>
+            <img class="icone" src="assets/icons/voluntariado.png" alt="Ícone representando trabalho voluntário">
+            <p>Os voluntários participam da organização das doações e ajudam nas ações realizadas pela ONG.</p>
+            <button type="button" disabled>Inscrições em breve</button>
+        </article>
+    </div>
+    <div class="modal">
+        <h2>Obrigado por apoiar!</h2>
+        <p>Sua participação ajuda a ONG Ponto de Recomeço a continuar suas ações.</p>
+        <button type="button">Fechar</button>
+    </div>
+</main>
+<footer><p>ONG Ponto de Recomeço</p></footer>
+<script src="js/menu.js"></script>
+</body>
+</html>
